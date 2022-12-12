@@ -68,9 +68,9 @@ const Header = ({ ...props }) => {
           <li>
             <Link href="/about/">About</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/projects/">Projects</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
 

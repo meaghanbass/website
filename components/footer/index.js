@@ -7,7 +7,7 @@ const Footer = ({}) => {
 
   return (
     <FooterContainer>
-      <div className="marquee-wrapper">
+      {/* <div className="marquee-wrapper">
         <Marquee gradient={false} speed={50}>
           <h3>Check out some of my work</h3>
           <Button href="/projects/">Projects</Button>
@@ -16,7 +16,7 @@ const Footer = ({}) => {
           <h3>Check out some of my work</h3>
           <Button href="/projects/">Projects</Button>
         </Marquee>
-      </div>
+      </div> */}
 
       <div className="credits">
         <p>© {date} MEAGHAN BASS.</p>

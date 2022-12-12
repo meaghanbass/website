@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       <Global styles={globalStyles} />
 
-      {/* <Header /> */}
+      <Header />
 
       <main>
         <div className="container">{children}</div>
