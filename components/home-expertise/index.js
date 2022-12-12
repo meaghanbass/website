@@ -87,7 +87,7 @@ const HomeExpertise = ({}) => {
         <div className="column right">
           <div className="row">
             <div className="column left">
-              <p>I'm passtionate about uncovering the best digital innovations for forward-thinking brands looking to push boundaries and drive significant impact.</p>
+              <p>I&apos;m passtionate about uncovering the best digital innovations for forward-thinking brands looking to push boundaries and drive significant impact.</p>
             </div>
 
             <div className="column right">
