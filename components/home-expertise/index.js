@@ -2,6 +2,7 @@ import HomeExpertiseContainer from "./index.style.js";
 import Button from "../button";
 import { gsap } from "gsap";
 import Image from "next/image";
+import WebDesignImage from "../../public/images/color-swatches.webp";
 
 const experienceList = [
   {
@@ -9,11 +10,11 @@ const experienceList = [
     items: [
       {
         title: "Web Design",
-        image: "images/color-swatches.webp",
+        image: WebDesignImage,
       },
       {
         title: "Development",
-        image: "images/laptops.webp",
+        image: "/images/laptops.webp",
       },
     ],
   },
