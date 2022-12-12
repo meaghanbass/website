@@ -9,11 +9,11 @@ const experienceList = [
     items: [
       {
         title: "Web Design",
-        image: "/images/color-swatches.webp",
+        image: "images/color-swatches.webp",
       },
       {
         title: "Development",
-        image: "/images/laptops.webp",
+        image: "images/laptops.webp",
       },
     ],
   },
