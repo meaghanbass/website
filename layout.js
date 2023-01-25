@@ -8,13 +8,20 @@ const Layout = ({ children }) => {
     <>
       <Global styles={globalStyles} />
 
-      <Header />
+      {/* <Header /> */}
 
       <main>
         <div className="container">{children}</div>
       </main>
 
       <Footer />
+
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR2D5RS"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+        }}
+      />
     </>
   );
 };
