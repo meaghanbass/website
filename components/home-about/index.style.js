@@ -53,6 +53,9 @@ const HomeAboutContainer = styled.div`
         ${mediaQuery[3]} {
           width: 41.67%;
           order: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .button {

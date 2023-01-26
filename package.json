@@ -14,6 +14,7 @@
     "@next/font": "^13.0.1",
     "@react-three/drei": "9.32",
     "@react-three/fiber": "8.8",
+    "conversational-form": "^1.0.2",
     "gsap": "^3.11.3",
     "leva": "^0.9.34",
     "next": "13.0.0",

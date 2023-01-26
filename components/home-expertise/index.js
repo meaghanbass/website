@@ -90,9 +90,9 @@ const HomeExpertise = ({}) => {
               <p>I&apos;m passtionate about uncovering the best digital innovations for forward-thinking brands looking to push boundaries and drive significant impact.</p>
             </div>
 
-            <div className="column right">
+            {/* <div className="column right">
               <Button href="/about/">More About My Expertise</Button>
-            </div>
+            </div> */}
           </div>
 
           <div className="list">

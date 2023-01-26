@@ -35,10 +35,16 @@ const FooterContainer = styled.div`
       .marquee {
         h3 {
           margin: ${remCalc(5)} 0;
+          transition: all 0.4s ease-in-out 0s;
+
+          &.blurry {
+            filter: blur(4px);
+            transition: all 0.4s ease-in-out 0s;
+          }
         }
 
         .button {
-          margin: 0 ${remCalc(36)};
+          margin: 0 ${remCalc(100)};
         }
       }
     }

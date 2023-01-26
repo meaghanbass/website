@@ -25,7 +25,6 @@ const globalStyles = css`
 
   body {
     line-height: 1;
-    // min-height: 200vh;
     background-color: #0a050d;
     color: #ffffff;
     font-family: ${inter.style.fontFamily}, sans-serif;
@@ -163,6 +162,11 @@ const globalStyles = css`
   .row {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  // Conversational Form
+  #conversational-form {
+    display: none;
   }
 
   // React-Three-Fiber Styles

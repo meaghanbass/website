@@ -1,20 +1,23 @@
 import { globalStyles } from "./utils";
+import { useRouter } from "next/router";
 import { Global } from "@emotion/react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+
   return (
     <>
       <Global styles={globalStyles} />
 
-      {/* <Header /> */}
+      <Header />
 
       <main>
         <div className="container">{children}</div>
       </main>
 
-      <Footer />
+      {router.pathname !== "/contact" && <Footer />}
 
       <noscript
         dangerouslySetInnerHTML={{

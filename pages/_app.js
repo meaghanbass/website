@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import Script from "next/script";
-import Header from "../components/header";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,7 +13,6 @@ function MyApp({ Component, pageProps }) {
         })(window,document,'script','dataLayer','GTM-MR2D5RS');
       `}
       </Script>
-      <Header />
       <Component {...pageProps} />
     </StrictMode>
   );
