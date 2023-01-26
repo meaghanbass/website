@@ -9,7 +9,7 @@ const Intro = () => (
 
     <fieldset cf-questions="What's your first name?">
       <cf-robot-message cf-questions="Hey! <br />I'm excited to hear more about your project." />
-      <label htmlFor="name">What's your first name?</label>
+      <label htmlFor="name">What&apos;s your first name?</label>
       <input required type="text" name="Name" id="name" className="outfunnel-input-firstname" />
     </fieldset>
   </>
@@ -17,7 +17,7 @@ const Intro = () => (
 
 const Email = ({ name }) => (
   <fieldset cf-questions="Thanks, {name}. What is your email?">
-    <label htmlFor="email">Thanks, {name}. What's your email?</label>
+    <label htmlFor="email">Thanks, {name}. What&apos;s your email?</label>
     <input required type="email" name="Email" id="email" className="outfunnel-input-email" />
   </fieldset>
 );
