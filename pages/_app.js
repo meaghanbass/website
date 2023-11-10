@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     };
 
     gtmVirtualPageView(mainDataLayer);
-  }, []);
+  }, [pageProps, router]);
 
   return (
     <StrictMode>
