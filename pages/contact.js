@@ -17,3 +17,9 @@ export default function Contact() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: "Contact" }, // is passed up to the custom app as pageProps
+  };
+}

@@ -17,3 +17,9 @@ export default function Work() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: "Work" }, // is passed up to the custom app as pageProps
+  };
+}

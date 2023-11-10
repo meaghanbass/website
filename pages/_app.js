@@ -1,9 +1,28 @@
-import { StrictMode } from "react";
+import { useRouter } from "next/router";
+import { StrictMode, useEffect } from "react";
 import Script from "next/script";
 import { globalStyles } from "../utils";
 import { Global } from "@emotion/react";
 
+export const gtmVirtualPageView = (rest) => {
+  window.dataLayer?.push({
+    event: "VirtualPageView",
+    ...rest,
+  });
+};
+
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const mainDataLayer = {
+      pageTypeName: pageProps.page || null,
+      url: router.pathname,
+    };
+
+    gtmVirtualPageView(mainDataLayer);
+  }, []);
+
   return (
     <StrictMode>
       <Script id="google-tag-manager" strategy="afterInteractive">

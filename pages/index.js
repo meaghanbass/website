@@ -23,3 +23,9 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: "Home" }, // is passed up to the custom app as pageProps
+  };
+}

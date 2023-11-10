@@ -17,3 +17,9 @@ export default function About() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: { page: "About" }, // is passed up to the custom app as pageProps
+  };
+}
