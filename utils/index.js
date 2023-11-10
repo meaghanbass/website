@@ -157,11 +157,118 @@ const globalStyles = css`
         margin-bottom: 36px;
       }
     }
+
+    &.sm {
+      font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (2000 - 300)));
+
+      &:not(:last-of-type) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &.xs {
+      font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (2000 - 300)));
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      .icon {
+        svg {
+          width: ${remCalc(12)};
+          height: ${remCalc(12)};
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-flex;
+    gap: ${remCalc(12)};
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .highlight {
+    & * {
+      color: #e1cfb7;
+      fill: #e1cfb7 !important;
+    }
+  }
+
+  details {
+    position: relative;
+    padding: ${remCalc(36)} 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: rgb(255, 255, 255);
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:last-of-type {
+      &::after {
+        transition: all 0.4s ease-in-out 0s;
+        content: "";
+        position: absolute;
+        height: 1px;
+        background: rgb(255, 255, 255);
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    summary {
+      cursor: pointer;
+
+      &::marker,
+      &::-webkit-details-marker {
+        display: none !important;
+      }
+
+      * {
+        margin-bottom: 0;
+      }
+
+      .icon {
+        transition: all 0.4s ease-in-out 0s;
+        border: 1px solid #ffffff;
+        border-radius: 9999px;
+        width: ${remCalc(36)};
+        height: ${remCalc(36)};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &[open] {
+      summary {
+        .icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 
   .row {
     display: flex;
     flex-wrap: wrap;
+
+    &.justify-between {
+      justify-content: space-between;
+    }
+
+    &.align-center {
+      align-items: center;
+    }
   }
 
   // Conversational Form

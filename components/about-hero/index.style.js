@@ -12,12 +12,6 @@ const AboutHeroContainer = styled.div`
     ${mediaQuery[3]} {
       margin-left: 20.5vw;
     }
-
-    p {
-      .highlight {
-        color: #e1cfb7;
-      }
-    }
   }
 `;
 

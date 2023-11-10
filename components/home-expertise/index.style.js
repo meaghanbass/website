@@ -13,7 +13,7 @@ const HomeExpertiseContainer = styled.div`
     object-fit: cover;
     z-index: -1;
     opacity: 0;
-    visibily: hidden;
+    visibility: hidden;
     pointer-events: none;
     filter: grayscale(100%);
     // filter: sepia(1);
@@ -96,7 +96,7 @@ const HomeExpertiseContainer = styled.div`
       }
 
       &.two {
-        justify-content; flex-start;
+        justify-content: flex-start;
       }
 
       &.three {
@@ -112,7 +112,7 @@ const HomeExpertiseContainer = styled.div`
       ${mediaQuery[3]} {
         margin: 0 ${remCalc(30)} 0 0;
       }
-      
+
       &::before {
         content: "0" counter(counter-number);
         padding: 0 ${remCalc(30)};
@@ -128,7 +128,7 @@ const HomeExpertiseContainer = styled.div`
       }
 
       &::after {
-        content: '';
+        content: "";
         width: 1px;
         height: 100%;
         background-color: #ffffff;

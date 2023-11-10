@@ -4,7 +4,7 @@ import ContactFormContainer from "./index.style.js";
 const Intro = () => (
   <>
     <fieldset>
-      <input type="text" name="_subject" style={{ display: "none" }} value="Form: Portfolio - Conversational Contact Form" />
+      <input type="text" name="_subject" style={{ display: "none" }} value="Form: Portfolio - Conversational Contact Form" readOnly />
     </fieldset>
 
     <fieldset cf-questions="What's your first name?">

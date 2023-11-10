@@ -3,6 +3,7 @@ import Layout from "../layout";
 import HomeHero from "../components/home-hero";
 import HomeAbout from "../components/home-about";
 import HomeExpertise from "../components/home-expertise";
+import HomeWork from "../components/home-work";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HomeHero />
         <HomeAbout />
         <HomeExpertise />
+        <HomeWork />
       </Layout>
     </div>
   );

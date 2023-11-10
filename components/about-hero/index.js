@@ -14,7 +14,7 @@ const AboutHero = ({}) => {
         </p>
 
         <p>
-          I&apos;m particularly skilled in creating <em>efficient</em> solutions to architectural conundrums. I thrive in situations where I need to build products that are scalable far into the future.{" "}
+          I&apos;m particularly skilled in creating <em>efficient</em> solutions to architectural challenges. I thrive in situations where I need to build products that are scalable far into the future.{" "}
           <span className="highlight">(I think this stems from my organization obsession.)</span>
         </p>
 
