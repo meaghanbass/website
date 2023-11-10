@@ -23,7 +23,7 @@ const ContactFormContainer = styled.div`
 
     > div {
       &:nth-of-type(1) {
-        display: none !important;
+        /* display: none !important; */
       }
     }
 
