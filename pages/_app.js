@@ -1,5 +1,7 @@
 import { StrictMode } from "react";
 import Script from "next/script";
+import { globalStyles } from "../utils";
+import { Global } from "@emotion/react";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         })(window,document,'script','dataLayer','GTM-MR2D5RS');
       `}
       </Script>
+      <Global styles={globalStyles} />
       <Component {...pageProps} />
     </StrictMode>
   );

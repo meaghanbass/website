@@ -1,6 +1,6 @@
-import { globalStyles } from "./utils";
+// import { globalStyles } from "./utils";
 import { useRouter } from "next/router";
-import { Global } from "@emotion/react";
+// import { Global } from "@emotion/react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Global styles={globalStyles} />
+      {/* <Global styles={globalStyles} /> */}
 
       <Header />
 
