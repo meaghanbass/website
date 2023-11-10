@@ -16,6 +16,7 @@
     "@react-three/fiber": "8.8",
     "conversational-form": "^1.0.2",
     "gsap": "^3.11.3",
+    "html-react-parser": "^5.0.6",
     "leva": "^0.9.34",
     "next": "13.0.0",
     "r3f-perf": "^6.5.0",

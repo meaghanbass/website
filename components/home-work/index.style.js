@@ -51,7 +51,7 @@ const HomeWorkContainer = styled.div`
         order: 2;
 
         ${mediaQuery[3]} {
-          width: 41.67%;
+          width: 33.33%;
           order: 1;
           display: flex;
           align-items: center;
@@ -69,7 +69,7 @@ const HomeWorkContainer = styled.div`
 
       &.right {
         ${mediaQuery[3]} {
-          width: 58.33%;
+          width: 66.67%;
         }
       }
     }
