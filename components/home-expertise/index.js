@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import HomeExpertiseContainer from "./index.style.js";
 import Button from "../button";
 import { gsap } from "gsap";
@@ -52,7 +53,12 @@ const experienceList = [
 ];
 
 const HomeExpertise = ({}) => {
-  if (typeof window !== "undefined") {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (isClient) {
     gsap.set(".list img.hoverimage", { yPercent: -50, xPercent: -50 });
 
     gsap.utils.toArray(".list__item").forEach((el) => {
@@ -75,6 +81,8 @@ const HomeExpertise = ({}) => {
 
       el.addEventListener("mouseleave", () => fade.reverse());
     });
+  } else {
+    null;
   }
 
   return (
@@ -89,10 +97,6 @@ const HomeExpertise = ({}) => {
             <div className="column left">
               <p>I&apos;m passtionate about uncovering the best digital innovations for forward-thinking brands looking to push boundaries and drive significant impact.</p>
             </div>
-
-            {/* <div className="column right">
-              <Button href="/about/">More About My Expertise</Button>
-            </div> */}
           </div>
 
           <div className="list">

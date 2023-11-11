@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import WorkHeroContainer from "./index.style.js";
 import Icon from "../../assets/fonts/icon/index.js";
 import Html2react from "../common/html2react.js";
@@ -50,8 +50,30 @@ const workList = [
   },
 ];
 
+export const gtmProjectViewed = (rest) => {
+  window.dataLayer?.push({
+    event: "ProjectViewed",
+    // linkTo: null,
+    ...rest,
+  });
+};
+
 const WorkHero = ({}) => {
-  if (typeof window !== "undefined") {
+  // const mainDataLayer = {
+  //   linkTo: props.href,
+  // };
+  // const handleClick = (e) => {
+  //   // gtmProjectViewed(mainDataLayer);
+  //   // console.log("e.target.dataset", e.target.dataset.title);
+  //   console.log(e.target.parentNode.dataset.title ? e.target.parentNode.dataset.title : e.target.parentNode.parentNode.dataset.title);
+  // };
+
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (isClient) {
     gsap.set("details img.hoverimage", { yPercent: -50, xPercent: -50 });
 
     gsap.utils.toArray("details").forEach((el) => {
@@ -74,6 +96,8 @@ const WorkHero = ({}) => {
 
       el.addEventListener("mouseleave", () => fade.reverse());
     });
+  } else {
+    null;
   }
 
   return (
@@ -84,8 +108,11 @@ const WorkHero = ({}) => {
         return (
           <React.Fragment key={i}>
             <details>
-              <summary>
-                <div className="row justify-between align-center">
+              <summary
+                // onClick={handleClick} onKeyDown={handleClick}
+                data-title={item.name}
+              >
+                <div className="row no-wrap justify-between align-center">
                   <h3>{item.name}</h3>
 
                   <Icon type="arrow" />
@@ -107,32 +134,6 @@ const WorkHero = ({}) => {
           </React.Fragment>
         );
       })}
-
-      {/* <div className="">
-        <details>
-          <summary>
-            <div className="row justify-between align-center">
-              <h3>Avidian Wealth Solutions</h3>
-
-              <Icon type="arrow" />
-            </div>
-
-            <Image className="hoverimage" src="/images/color-swatches.webp" alt="" width="200" height="250" />
-          </summary>
-
-          <div className="content">
-            <p className="sm">
-              Avidian Wealth Solutions (&quot;Avidian&quot;) is a top-tier investment management office in the Houston/Austin area. I led the entire architecure and development of their new website utilizing WordPress, Next.JS, and Vercel.
-            </p>
-
-            <p className="highlight">
-              <a className="xs" href="" target="" title="">
-                Visit Website <Icon type="external" />
-              </a>
-            </p>
-          </div>
-        </details>
-      </div> */}
     </WorkHeroContainer>
   );
 };

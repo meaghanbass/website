@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Inter, DM_Serif_Display, Monsieur_La_Doulaise, Playfair_Display } from "@next/font/google";
+import { Inter, DM_Serif_Display, Monsieur_La_Doulaise, Playfair_Display } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 const dmserifdisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
@@ -200,7 +200,11 @@ const globalStyles = css`
 
   details {
     position: relative;
-    padding: ${remCalc(36)} 0;
+    padding: ${remCalc(24)} 0;
+
+    ${mediaQuery[3]} {
+      padding: ${remCalc(36)} 0;
+    }
 
     &::before {
       content: "";
@@ -227,6 +231,7 @@ const globalStyles = css`
 
     summary {
       cursor: pointer;
+      list-style: none;
 
       &::marker,
       &::-webkit-details-marker {
@@ -241,7 +246,9 @@ const globalStyles = css`
         transition: all 0.4s ease-in-out 0s;
         border: 1px solid #ffffff;
         border-radius: 9999px;
+        min-width: ${remCalc(36)};
         width: ${remCalc(36)};
+        min-height: ${remCalc(36)};
         height: ${remCalc(36)};
         display: flex;
         align-items: center;
@@ -262,6 +269,10 @@ const globalStyles = css`
     display: flex;
     flex-wrap: wrap;
 
+    &.no-wrap {
+      flex-wrap: nowrap;
+    }
+
     &.justify-between {
       justify-content: space-between;
     }
@@ -274,21 +285,6 @@ const globalStyles = css`
   // Conversational Form
   #conversational-form {
     display: none;
-  }
-
-  // React-Three-Fiber Styles
-  .r3f-label {
-    > div {
-      font-family: Helvetica, Arial;
-      position: absolute;
-      background: #00000088;
-      color: white;
-      padding: 15px;
-      white-space: nowrap;
-      overflow: hidden;
-      border-radius: 30px;
-      user-select: none;
-    }
   }
 `;
 

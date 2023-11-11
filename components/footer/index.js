@@ -11,7 +11,7 @@ const Footer = ({}) => {
   return (
     <FooterContainer>
       <div className="marquee-wrapper">
-        <Marquee gradient={false} speed={50}>
+        <Marquee className="marquee-container" gradient={false} speed={50}>
           <h3 className={`${isBlurred ? "blurry" : ""}`}>Hey! 👋🏻 Get in touch</h3>
           <Button href="/contact/" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
             Contact

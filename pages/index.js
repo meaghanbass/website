@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Meaghan Bass | Digital. Creative. Construction</title>
+        <title>Meaghan Bass | Digital Creative Construction</title>
         <meta name="description" content="Meaghan is a digital creator specializing in design, development, and 3D animations." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -63,17 +63,6 @@ const Header = ({ ...props }) => {
         </svg>
       </Link>
 
-      {/* <nav>
-        <ul>
-          <li>
-            <Link href="/about/">About</Link>
-          </li>
-          <li>
-            <Link href="/projects/">Projects</Link>
-          </li>
-        </ul>
-      </nav> */}
-
       <div className="button-wrapper">
         <Button href="/contact/">contact</Button>
       </div>

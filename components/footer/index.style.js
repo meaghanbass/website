@@ -32,7 +32,7 @@ const FooterContainer = styled.div`
     }
 
     .marquee-container {
-      .marquee {
+      .rfm-marquee {
         h3 {
           margin: ${remCalc(5)} 0;
           transition: all 0.4s ease-in-out 0s;

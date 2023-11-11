@@ -8,7 +8,7 @@ const Intro = () => (
     </fieldset>
 
     <fieldset cf-questions="What's your first name?">
-      <cf-robot-message cf-questions="Hey! <br />I'm excited to hear more about your project." />
+      <cf-robot-message id="TEST" cf-questions="Hey! <br />I'm excited to hear more about your project." />
       <label htmlFor="name">What&apos;s your first name?</label>
       <input required type="text" name="Name" id="name" className="outfunnel-input-firstname" />
     </fieldset>
@@ -32,7 +32,6 @@ const ProjectOverview = () => (
 const ThankYou = () => <cf-robot-message cf-questions="Awesome! I can’t wait to meet you and hear more about your project. I'll reach out to you as soon as possible." />;
 
 const ContactForm = ({}) => {
-  const form = useRef(null);
   const staticForm = useRef(null);
   const convoForm = useRef(null);
 
@@ -55,6 +54,22 @@ const ContactForm = ({}) => {
       options: {
         theme: "dark",
       },
+      flowStepCallback: function (dto, success, error) {
+        var currentStep = cfInstance.flowManager.getStep() + 1; // Steps are 0-based so we add 1
+        console.log("currentStep", currentStep);
+        var maxSteps = cfInstance.flowManager.maxSteps; // This value is not 0-based
+        var ga_action = "Step " + currentStep + "/" + maxSteps;
+        var ga_label = "Field - " + dto.tag.name; // We only track actual field name for reference purpose. If you want to track the actual value you may do so.
+
+        console.log("GA event tracking.\n\tCategory: " + "Contact Form" + "\n\taction: " + ga_action + "\n\tlabel:" + ga_label);
+        gtag("event", "CF event", {
+          event_category: "Contact Form",
+          event_action: ga_action,
+          event_label: ga_label,
+        });
+
+        success();
+      },
       submitCallback: () => {
         const data = new FormData(form);
         const xhr = new XMLHttpRequest();
@@ -71,6 +86,7 @@ const ContactForm = ({}) => {
           }
         };
         xhr.send(data);
+        gtag("event", "Form Completed");
       },
     });
   }

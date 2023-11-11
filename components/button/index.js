@@ -2,9 +2,24 @@ import styled from "@emotion/styled";
 import { remCalc } from "../../utils";
 import Link from "next/link";
 
+export const gtmButtonClick = (rest) => {
+  window.dataLayer?.push({
+    event: "ButtonClick",
+    linkTo: null,
+    ...rest,
+  });
+};
+
 const Button = ({ children, ...props }) => {
+  const mainDataLayer = {
+    linkTo: props.href,
+  };
+  const handleClick = () => {
+    gtmButtonClick(mainDataLayer);
+  };
+
   return (
-    <ButtonContainer className="button" {...props}>
+    <ButtonContainer className="button" onClick={handleClick} onKeyDown={handleClick} {...props}>
       {children}
     </ButtonContainer>
   );

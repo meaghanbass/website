@@ -1,8 +1,8 @@
 import IconContainer from "./index.style.js";
 
-const Icon = ({ type }) => {
+const Icon = ({ type, ...props }) => {
   return (
-    <IconContainer className="icon">
+    <IconContainer className="icon" {...props}>
       {type === "arrow" && (
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16 8L14.59 6.59L9 12.17L9 -6.11959e-07L7 -7.86805e-07L7 12.17L1.42 6.58L6.99382e-07 8L8 16L16 8Z" />
