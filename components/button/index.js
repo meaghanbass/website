@@ -13,6 +13,8 @@ export const gtmButtonClick = (rest) => {
 const Button = ({ children, ...props }) => {
   const mainDataLayer = {
     linkTo: props.href,
+    title: props.title,
+    location: props["data-location"],
   };
   const handleClick = () => {
     gtmButtonClick(mainDataLayer);

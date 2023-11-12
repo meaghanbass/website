@@ -64,7 +64,9 @@ const Header = ({ ...props }) => {
       </Link>
 
       <div className="button-wrapper">
-        <Button href="/contact/">contact</Button>
+        <Button href="/contact/" title="Contact" data-location="Header">
+          contact
+        </Button>
       </div>
     </HeaderContainer>
   );

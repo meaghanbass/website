@@ -6,7 +6,9 @@ const HomeAbout = ({}) => {
     <HomeAboutContainer>
       <div className="row">
         <div className="column left">
-          <Button href="/about/">More About Me</Button>
+          <Button href="/about/" title="More About Me" data-location="home-about">
+            More About Me
+          </Button>
         </div>
 
         <div className="column right">

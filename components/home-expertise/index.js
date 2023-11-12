@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import HomeExpertiseContainer from "./index.style.js";
-import Button from "../button";
 import { gsap } from "gsap";
 import Image from "next/image";
 
@@ -40,12 +39,10 @@ const experienceList = [
     items: [
       {
         title: "3D Animation",
-        // image: "https://media.tenor.com/bxtIl41vKEIAAAAd/stimulated-3d.gif",
-        image: "/images/3d.gif",
+        image: "/images/3d.webp",
       },
       {
         title: "Design Systems",
-        // image: "https://images.unsplash.com/photo-1537202108838-e7072bad1927?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1046&q=80",
         image: "/images/design-systems.webp",
       },
     ],

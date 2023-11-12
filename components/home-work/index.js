@@ -6,7 +6,9 @@ const HomeWork = ({}) => {
     <HomeWorkContainer>
       <div className="row">
         <div className="column left">
-          <Button href="/work/">See What I&apos;ve Done</Button>
+          <Button href="/work/" title="See What I've Done" data-location="home-work">
+            See What I&apos;ve Done
+          </Button>
         </div>
 
         <div className="column right">
