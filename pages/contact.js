@@ -7,7 +7,7 @@ export default function Contact() {
     <div>
       <Head>
         <title>Meaghan Bass | Contact</title>
-        <meta name="description" content="Meaghan is a digital creator specializing in design, development, and 3D animations." />
+        <meta name="description" content="Contact me!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -20,6 +20,6 @@ export default function Contact() {
 
 export async function getStaticProps() {
   return {
-    props: { page: "Contact" }, // is passed up to the custom app as pageProps
+    props: { page: "Contact" },
   };
 }

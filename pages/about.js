@@ -7,7 +7,7 @@ export default function About() {
     <div>
       <Head>
         <title>Meaghan Bass | About Me</title>
-        <meta name="description" content="Meaghan is a digital creator specializing in design, development, and 3D animations." />
+        <meta name="description" content="A little bit about me." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -20,6 +20,6 @@ export default function About() {
 
 export async function getStaticProps() {
   return {
-    props: { page: "About" }, // is passed up to the custom app as pageProps
+    props: { page: "About" },
   };
 }
