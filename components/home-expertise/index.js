@@ -39,7 +39,7 @@ const experienceList = [
     items: [
       {
         title: "3D Animation",
-        image: "/images/3d.webp",
+        image: "/images/3d.gif",
       },
       {
         title: "Design Systems",

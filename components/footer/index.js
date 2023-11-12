@@ -17,23 +17,23 @@ const Footer = ({}) => {
             Contact
           </Button>
           <h3 className={`${isBlurred ? "blurry" : ""}`}>Hey! 👋🏻 Get in touch</h3>
-          <Button href="/contact/" title="Contact" data-location="footer" aria-hidden="true" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
+          <Button href="/contact/" title="Contact" data-location="footer" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
             Contact
           </Button>
           <h3 className={`${isBlurred ? "blurry" : ""}`}>Hey! 👋🏻 Get in touch</h3>
-          <Button href="/contact/" title="Contact" data-location="footer" aria-hidden="true" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
+          <Button href="/contact/" title="Contact" data-location="footer" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
             Contact
           </Button>
           <h3 className={`${isBlurred ? "blurry" : ""}`}>Hey! 👋🏻 Get in touch</h3>
-          <Button href="/contact/" title="Contact" data-location="footer" aria-hidden="true" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
+          <Button href="/contact/" title="Contact" data-location="footer" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
             Contact
           </Button>
           <h3 className={`${isBlurred ? "blurry" : ""}`}>Hey! 👋🏻 Get in touch</h3>
-          <Button href="/contact/" title="Contact" data-location="footer" aria-hidden="true" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
+          <Button href="/contact/" title="Contact" data-location="footer" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
             Contact
           </Button>
           <h3 className={`${isBlurred ? "blurry" : ""}`}>Hey! 👋🏻 Get in touch</h3>
-          <Button href="/contact/" title="Contact" data-location="footer" aria-hidden="true" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
+          <Button href="/contact/" title="Contact" data-location="footer" onMouseEnter={() => setIsBlurred(true)} onMouseLeave={() => setIsBlurred(false)}>
             Contact
           </Button>
         </Marquee>

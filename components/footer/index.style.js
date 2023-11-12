@@ -53,7 +53,7 @@ const FooterContainer = styled.div`
   .credits {
     padding: ${remCalc(36)} ${remCalc(12)};
     text-align: right;
-    opacity: 0.4;
+    opacity: 0.7;
 
     ${mediaQuery[3]} {
       padding: ${remCalc(36)} ${remCalc(18)};
