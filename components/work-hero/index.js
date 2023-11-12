@@ -53,20 +53,14 @@ const workList = [
 export const gtmProjectViewed = (rest) => {
   window.dataLayer?.push({
     event: "ProjectViewed",
-    // linkTo: null,
     ...rest,
   });
 };
 
 const WorkHero = ({}) => {
-  // const mainDataLayer = {
-  //   linkTo: props.href,
-  // };
-  // const handleClick = (e) => {
-  //   // gtmProjectViewed(mainDataLayer);
-  //   // console.log("e.target.dataset", e.target.dataset.title);
-  //   console.log(e.target.parentNode.dataset.title ? e.target.parentNode.dataset.title : e.target.parentNode.parentNode.dataset.title);
-  // };
+  const handleClick = (e) => {
+    gtmProjectViewed({ projectViewed: e.currentTarget.getAttribute("data-title") });
+  };
 
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -108,10 +102,7 @@ const WorkHero = ({}) => {
         return (
           <React.Fragment key={i}>
             <details>
-              <summary
-                // onClick={handleClick} onKeyDown={handleClick}
-                data-title={item.name}
-              >
+              <summary onClick={(e) => handleClick(e)} onKeyDown={(e) => handleClick(e)} data-title={item.name}>
                 <div className="row no-wrap justify-between align-center">
                   <h3>{item.name}</h3>
 
