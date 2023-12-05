@@ -50,20 +50,47 @@ const FooterContainer = styled.div`
     }
   }
 
-  .credits {
-    padding: ${remCalc(36)} ${remCalc(12)};
-    text-align: right;
-    opacity: 0.7;
+  .row {
+    align-items: center;
+    justify-content: space-between;
 
-    ${mediaQuery[3]} {
-      padding: ${remCalc(36)} ${remCalc(18)};
-    }
-
-    p {
-      font-size: ${remCalc(12)};
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 0 ${remCalc(12)};
 
       ${mediaQuery[3]} {
-        font-size: ${remCalc(14)};
+        padding: 0 ${remCalc(18)};
+      }
+
+      a {
+        margin: 0;
+
+        .icon {
+          svg {
+            width: ${remCalc(24)};
+            height: ${remCalc(24)};
+          }
+        }
+      }
+    }
+
+    .credits {
+      padding: ${remCalc(36)} ${remCalc(12)};
+      text-align: right;
+      opacity: 0.7;
+
+      ${mediaQuery[3]} {
+        padding: ${remCalc(36)} ${remCalc(18)};
+      }
+
+      p {
+        font-size: ${remCalc(12)};
+
+        ${mediaQuery[3]} {
+          font-size: ${remCalc(14)};
+        }
       }
     }
   }

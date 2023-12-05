@@ -19,12 +19,12 @@ export default function Contact() {
 }
 
 export async function getStaticProps() {
-  await waitload(2);
+  // await waitload(2);
   return {
     props: { page: "Contact" },
   };
 }
 
-function waitload(sec) {
-  return new Promise((resolve) => setTimeout(resolve, sec * 1000));
-}
+// function waitload(sec) {
+//   return new Promise((resolve) => setTimeout(resolve, sec * 1000));
+// }

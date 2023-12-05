@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import HomeExpertiseContainer from "./index.style.js";
-import { gsap } from "gsap";
 import Image from "next/image";
+
+import { gsap } from "gsap";
 
 const experienceList = [
   {

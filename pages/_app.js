@@ -1,8 +1,15 @@
 import { useRouter } from "next/router";
-import { StrictMode, useEffect } from "react";
+// import { StrictMode, useEffect } from "react";
+import React, { StrictMode, useState, useEffect, useRef, useLayoutEffect } from "react";
 import Script from "next/script";
 import { globalStyles } from "../utils";
 import { Global } from "@emotion/react";
+
+import { gsap } from "gsap";
+import { SplitText } from "gsap/dist/SplitText";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const gtmVirtualPageView = (rest) => {
   window.dataLayer?.push({

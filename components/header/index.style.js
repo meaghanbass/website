@@ -76,6 +76,10 @@ const HeaderContainer = styled.header`
     svg {
       width: auto;
       height: ${remCalc(12)};
+
+      ${mediaQuery[3]} {
+        height: ${remCalc(20)};
+      }
     }
   }
 

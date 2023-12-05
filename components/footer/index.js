@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Link from "next/link.js";
 import FooterContainer from "./index.style.js";
 import Marquee from "react-fast-marquee";
 import Button from "../button";
+import Icon from "../../assets/fonts/icon/index.js";
 
 const Footer = ({}) => {
   const date = new Date().getFullYear();
@@ -39,8 +41,20 @@ const Footer = ({}) => {
         </Marquee>
       </div>
 
-      <div className="credits">
-        <p>© {date} MEAGHAN BASS.</p>
+      <div className="row">
+        <div className="social-links">
+          <Link href="https://www.linkedin.com/in/meaghanbass/" target="_blank">
+            <Icon type="linkedin" />
+          </Link>
+
+          <Link href="https://github.com/meaghanbass" target="_blank">
+            <Icon type="github" />
+          </Link>
+        </div>
+
+        <div className="credits">
+          <p>© {date} MEAGHAN BASS.</p>
+        </div>
       </div>
     </FooterContainer>
   );

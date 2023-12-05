@@ -88,7 +88,6 @@ const globalStyles = css`
 
   h1,
   .h1 {
-    // font-size: calc(36px + (48 - 36) * ((100vw - 300px) / (2000 - 300)));
     font-size: calc(36px + (175 - 36) * ((100vw - 300px) / (2000 - 300)));
     margin-bottom: 36px;
   }
@@ -285,6 +284,11 @@ const globalStyles = css`
   // Conversational Form
   #conversational-form {
     display: none;
+  }
+
+  // GSAP
+  .lineParent {
+    overflow: hidden;
   }
 `;
 
